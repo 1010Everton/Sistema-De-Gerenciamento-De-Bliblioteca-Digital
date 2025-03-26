@@ -21,10 +21,32 @@ public class Livros {
     @Temporal(TemporalType.DATE)
     private Date Datadepublicacao;
     @Enumerated(EnumType.ORDINAL)
-    private int paginaslidas;
+    private Contagem paginaslidas;
     @Enumerated(EnumType.ORDINAL)
-    private int visualizacoes;
+    private Contagem visualizacoes;
 
+
+    public Livros(String nome, String autor, String resumo) {
+        this.nome = nome;
+        this.autor = autor;
+        this.resumo = resumo;
+    }
+
+    public Contagem getPaginaslidas() {
+        return paginaslidas;
+    }
+
+    public void setPaginaslidas(Contagem paginaslidas) {
+        this.paginaslidas = paginaslidas;
+    }
+
+    public Contagem getVisualizacoes() {
+        return visualizacoes;
+    }
+
+    public void setVisualizacoes(Contagem visualizacoes) {
+        this.visualizacoes = visualizacoes;
+    }
 
     public Date getDatadepublicacao() {
         return Datadepublicacao;
@@ -32,22 +54,6 @@ public class Livros {
 
     public void setDatadepublicacao(Date datadepublicacao) {
         Datadepublicacao = datadepublicacao;
-    }
-
-    public int getPaginaslidas() {
-        return paginaslidas;
-    }
-
-    public void setPaginaslidas(int paginaslidas) {
-        this.paginaslidas = paginaslidas;
-    }
-
-    public int getVisualizacoes() {
-        return visualizacoes;
-    }
-
-    public void setVisualizacoes(int visualizacoes) {
-        this.visualizacoes = visualizacoes;
     }
 
     public String getResumo() {
